@@ -55,7 +55,7 @@ class Corrector(ABC):
         self.device = "cuda" if self.device == "gpu" else self.device
         self.ckpt_path = kwargs.get("ckpt_path", None)
 
-        self.vocab_path, self.weights_path = None, None, None
+        self.vocab_path, self.weights_path = None, None
         self.model, self.vocab = None, None
 
         if not self._default_name:
